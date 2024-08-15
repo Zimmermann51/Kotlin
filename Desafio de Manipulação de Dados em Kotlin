@@ -1,0 +1,15 @@
+fun main() {
+
+    var nomeProduto: String = "Lata"
+    var precoProduto: Double = 12.99
+    var quantprodutosComp: Int = 12
+    var multprecoQuant: Double
+    var taxaImposto: Double = 20.0
+    var valorcomImpostos: Double = 0.0
+
+
+    multprecoQuant = precoProduto * quantprodutosComp
+    valorcomImpostos = multprecoQuant + (multprecoQuant *  (taxaImposto / 100))
+
+
+}

@@ -1,0 +1,28 @@
+fun main() {
+
+    var nomePessoa: String = "Matheus"
+    var idade: Int = 20
+    var salarioBruto: Double = 1943.32
+    var mesesTrabalhados: Int = 12
+    var produtosComprados: Int = 200
+    var multsalarioMeses: Double
+    var salarioLiquido: Double
+    var percentualDesconto: Double = 40.0
+
+
+    multsalarioMeses = salarioBruto * mesesTrabalhados
+    salarioLiquido = multsalarioMeses - ( multsalarioMeses * (percentualDesconto / 100) )
+
+
+    println("Olá $nomePessoa, esse é seu salário anual liquido é: $salarioLiquido")
+    println("Nome: $nomePessoa")
+    println("idade: $idade")
+    println("Salario Bruto: $salarioBruto")
+    println("Meses Trabalhados: $mesesTrabalhados")
+    println("Percentual desconto: $percentualDesconto")
+    println("Produtos Comprados: $produtosComprados")
+    println("Multiplicação de salario e meses trabalhados: $multsalarioMeses")
+    println("Salario Liquido: $salarioLiquido")
+
+
+}

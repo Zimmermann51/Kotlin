@@ -1,0 +1,32 @@
+fun main() {
+
+    var idade: Int = 22
+    var altura: Double = 1.65
+    var nomePessoa: String = "Matheus"
+    var estudante: Boolean = false
+    var somaIdade: Int
+    var multAltura: Double
+
+    somaIdade = idade + idade
+    multAltura = altura + altura
+
+    println ("A soma da idade é $somaIdade")
+
+    println ("A multiplicação entre as alturas é de $multAltura")
+
+    println ("Seja muito bem-vindo Sr.$nomePessoa")
+
+    println("Idade: $idade")
+    println("Nome: ${nomePessoa}")
+    println("Altura: $altura")
+    println("Estudante: $estudante")
+    println("Soma das idades: $somaIdade")
+    println("Altura dobrada $multAltura")
+
+
+
+
+
+
+
+}

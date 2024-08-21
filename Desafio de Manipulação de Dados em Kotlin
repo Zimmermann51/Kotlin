@@ -1,15 +1,31 @@
+import java.text.DecimalFormat
+
 fun main() {
+    val nomeProduto: String = "Celular"
+    val precoUnitario: Double = 450.00
+    val quantidadeComprada: Int = 10
+    val taxaImposto: Double = 15.0 // em porcentagem
+    val margemLucro: Double = 20.0 // em porcentagem
 
-    var nomeProduto: String = "Lata"
-    var precoProduto: Double = 12.99
-    var quantprodutosComp: Int = 12
-    var multprecoQuant: Double
-    var taxaImposto: Double = 20.0
-    var valorcomImpostos: Double = 0.0
+    val valorTotalSemImpostos: Double = precoUnitario * quantidadeComprada
+    val valorImposto: Double = valorTotalSemImpostos * (taxaImposto / 100)
+    val valorTotalComImpostos: Double = valorTotalSemImpostos + valorImposto
+    val precoVendaNecessario: Double = valorTotalComImpostos * (1 + margemLucro / 100)
 
 
-    multprecoQuant = precoProduto * quantprodutosComp
-    valorcomImpostos = multprecoQuant + (multprecoQuant *  (taxaImposto / 100))
+    val precoVendaFormatado: Double = precoVendaNecessario.toBigDecimal().setScale(2, java.math.RoundingMode.HALF_UP).toDouble()
 
+    val formatoMoeda = DecimalFormat("R$ #,##0.00")
+    val valorTotalComImpostosFormatado: String = formatoMoeda.format(valorTotalComImpostos)
+    val precoVendaFormatadoMoeda: String = formatoMoeda.format(precoVendaFormatado)
 
+    println("Nome do Produto: $nomeProduto")
+    println("Preço Unitário: ${formatoMoeda.format(precoUnitario)}")
+    println("Quantidade Comprada: $quantidadeComprada")
+    println("Taxa de Imposto: $taxaImposto%")
+    println("Margem de Lucro: $margemLucro%")
+    println("Valor Total Sem Impostos: ${formatoMoeda.format(valorTotalSemImpostos)}")
+    println("Valor do Imposto: ${formatoMoeda.format(valorImposto)}")
+    println("Valor Total com Impostos: $valorTotalComImpostosFormatado")
+    println("Preço de Venda Necessário: $precoVendaFormatadoMoeda")
 }

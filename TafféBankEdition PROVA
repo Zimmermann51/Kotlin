@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
+RECYCLER VIEW
 
 
 import android.graphics.Color
